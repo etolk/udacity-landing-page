@@ -68,10 +68,15 @@ section {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 1.5em;
 }
 
 .navbar__menu li {
     display: inline-block;
+    margin: 10px;
 }
 
 .navbar__menu .menu__link {

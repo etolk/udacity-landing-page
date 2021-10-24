@@ -50,9 +50,6 @@ for (let i = 0; i < sections.length; i++) {
 
 navMenu.appendChild(fragment);
 
-// style the nav
-navMenu.style.cssText = 'display: flex; justify-content: space-evenly; flex-wrap: wrap; font-size: 1.5em;';
-
 // Add class 'active' to section when near top of viewport
 
 
