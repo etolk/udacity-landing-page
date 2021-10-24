@@ -21,10 +21,9 @@
 /**
  * Define Global Variables
 */
-const sections = document.querySelectorAll("[id*='section']")
+const sections = document.querySelectorAll("[id*='section']");
 const fragment = document.createDocumentFragment();
-const navMenu = document.getElementById('navbar__list')
-const navMenuSections = navMenu.querySelectorAll('li')
+const navMenu = document.getElementById('navbar__list');
 /**
  * End Global Variables
  */
@@ -55,11 +54,14 @@ let buildMenu = () => {
 // Add class 'active' to section when near top of viewport
 let makeSectionActive = () => {
     for (const section of sections) {
+        const navMenuSections = document.getElementById('navbar__list').querySelectorAll('li');
         const box = section.getBoundingClientRect();
         if (box.top <= 150 && box.bottom >= 150) {
             section.setAttribute('class', 'active');
+            document.querySelector('.' + section.id).classList.add('active');
         } else {
             section.classList.remove('active');
+            document.querySelector('.' + section.id).classList.remove('active');
         }
     }
 }
