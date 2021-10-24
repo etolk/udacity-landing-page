@@ -23,6 +23,9 @@
  * 
 */
 
+const sections = document.querySelectorAll("[id*='section']")
+const fragment = document.createDocumentFragment();
+const navMenu = document.getElementById('navbar__list')
 
 /**
  * End Global Variables
@@ -39,7 +42,16 @@
 */
 
 // build the nav
+for (let i = 0; i < sections.length; i++) {
+    const navElement = document.createElement('li');
+    navElement.innerText = sections[i].querySelector('h2').textContent;
+    fragment.appendChild(navElement);
+};
 
+navMenu.appendChild(fragment);
+
+// style the nav
+navMenu.style.cssText = 'display: flex; justify-content: space-evenly; flex-wrap: wrap; font-size: 1.5em;';
 
 // Add class 'active' to section when near top of viewport
 
