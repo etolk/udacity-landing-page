@@ -18,6 +18,12 @@ body {
     color: #fff;
 }
 
+@media only screen and (max-width: 35em) {
+    body {
+        padding-top: 300px;
+    }
+}
+
 /* Typeography General*/
 
 h1 {
